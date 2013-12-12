@@ -3,6 +3,7 @@
 require 'bundler'
 Bundler.require
 
+set :port, 12345
 
 get '/css/*.css' do |name|
   scss name.to_sym
