@@ -21,4 +21,4 @@ get '/*.html' do |name|
   slim name.to_sym
 end
 
-# hi
+# hi2
