@@ -3,7 +3,6 @@
 require 'bundler'
 Bundler.require
 
-set :port, 12345
 set :public_folder, "#{ File.dirname(__FILE__) }/public"
 
 get '/css/*.css' do |name|
