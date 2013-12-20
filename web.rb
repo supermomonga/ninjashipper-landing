@@ -4,9 +4,10 @@ require 'bundler'
 Bundler.require
 
 set :port, 12345
+set :public_folder, "#{ File.dirname(__FILE__) }/public"
 
 get '/css/*.css' do |name|
-  scss name.to_sym
+  less name.to_sym
 end
 
 get '/js/*.js' do |name|
