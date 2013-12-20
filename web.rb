@@ -3,7 +3,8 @@
 require 'bundler'
 Bundler.require
 
-set :public_folder, "#{ File.dirname(__FILE__) }/public"
+
+set :public_folder, "#{ File.expand_path File.dirname(__FILE__) }/public"
 
 get '/css/*.css' do |name|
   less name.to_sym
