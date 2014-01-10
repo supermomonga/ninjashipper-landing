@@ -29,43 +29,63 @@ html lang="en"
             .nav-collapse.collapse.pull-right
               ul.nav
                 li.active
-                  a href="#" Hi
+                  a href="/" Home
                 li
-                  a href="#" Hi
+                  a href="/how_it_works.html" How it works
                 li
-                  a href="#" Hi
+                  a href="/shipping_methods.html" Shipping methods
                 li
-                  a href="#" Hi
+                  a href="/prices.html" Prices
                 li
-                  a href="#" Hi
+                  a href="/faq.html" FAQ
+                li
+                  a href="/contact.html" Contact
+                li
+                  a href="http://member.ninjashipper.com/users/login" Sing in
               form.navbar-form.pull-left
-                a.btn.btn-primary href="#" Hi
+                a.btn.btn-primary href="http://member.ninjashipper.com/users/add" Sign up
     == yield
+    /! content-13
+    section.content-13.subscribe-form.bg-turquoise
+      .container
+        .row
+          form
+            .span8
+              span Sign up for free
+              /input placeholder="Enter your e-mail" spellcheck="false" type="text"
+            .span4
+              a.btn.btn-large.btn-primary href="http://member.ninjashipper.com/users/add" Sign up
     /! footer-2
     footer.footer-2.bg-midnight-blue
       .container
         nav.pull-left
           ul
             li.active
-              a href="#" hi
+              a href="/" Home
             li
-              a href="#" hi
+              a href="/how_it_works.html" How it works
             li
-              a href="#" hi
+              a href="/shipping_methods.html" Shipping methods
             li
-              a href="#" hi
+              a href="/prices.html" Prices
             li
-              a href="#" hi
+              a href="/faq.html" FAQ
+            li
+              a href="/contact.html" Contact
+            li
+              a href="http://member.ninjashipper.com/users/login" Sing in
+            li
+              a href="http://member.ninjashipper.com/users/add" Sing up for free
         .social-btns.pull-right
-          .fui-vimeo
-            a href="#"
-          .fui-facebook
-            a href="#"
+          /.fui-vimeo
+          /  a href="#"
+          /.fui-facebook
+          /  a href="#"
           .fui-twitter
             a href="#"
         .additional-links
           | Be sure to take a look to our
-          a href="#" Privacy Policy
+          a href="privacy.html" Privacy Policy
     /! Placed at the end of the document so the pages load faster
     script src="/flat-ui/js/jquery-1.8.3.min.js"
     script src="/flat-ui/js/bootstrap.min.js"
