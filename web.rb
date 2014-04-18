@@ -2,6 +2,7 @@
 
 require 'bundler'
 Bundler.require
+require 'sinatra/reloader' if development?
 
 
 get '/css/*.css' do |name|
@@ -13,11 +14,17 @@ get '/js/*.js' do |name|
 end
 
 get '/' do
-  slim :index
+  # slim :index, layout: false
+  slim :comming_soon, layout: false
 end
 
 get '/*.html' do |name|
-  slim name.to_sym
+  if name == 'index'
+    slim :comming_soon, layout: false
+  else
+    name = :index if name == 'index_tmp'
+    slim name.to_sym
+  end
 end
 
 # hi5
