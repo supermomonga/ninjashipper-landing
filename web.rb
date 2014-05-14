@@ -15,19 +15,27 @@ end
 
 get '/' do
   @page = :index
-  # slim :index, layout: false
-  slim :comming_soon, layout: false
+  @page_title = "Japan Address, Mail Forwarding & Assisted purchasing."
+  if @debug
+    slim :comming_soon, layout: false
+  else
+    slim :index
+  end
+end
+
+before do
+  @debug = false
 end
 
 get '/*.html' do |name|
   case name.to_sym
-  when :index
-  when :index_tmp
+  when :index, :index_tmp
     @page_title = "Japan Address, Mail Forwarding & Assisted purchasing."
   else
     @page_title = name.gsub('_', ' ').capitalize
   end
-  if name == 'index'
+
+  if @debug == true && name == 'index'
     @page = name.to_sym
     slim :comming_soon, layout: false
   else
