@@ -23,7 +23,7 @@ get '/*.html' do |name|
   case name.to_sym
   when :index
   when :index_tmp
-    @page_title = "The easiest way to get Japanese items."
+    @page_title = "Japan Address, Mail Forwarding & Assisted purchasing."
   else
     @page_title = name.gsub('_', ' ').capitalize
   end
