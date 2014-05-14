@@ -20,6 +20,13 @@ get '/' do
 end
 
 get '/*.html' do |name|
+  case name.to_sym
+  when :index
+  when :index_tmp
+    @page_title = "The easiest way to get Japanese items."
+  else
+    @page_title = name.gsub('_', ' ').capitalize
+  end
   if name == 'index'
     @page = name.to_sym
     slim :comming_soon, layout: false
@@ -30,4 +37,3 @@ get '/*.html' do |name|
   end
 end
 
-# hi5
