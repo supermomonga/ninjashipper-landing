@@ -1,0 +1,32 @@
+section.bg-light-gray.faq.heading
+  .container
+    h1
+      | Our recommended
+      br
+      strong Shops
+section
+  .container
+    .row
+      .span9
+        h2= @cat_name
+        hr
+        - if @shops
+          table.table.table-bordered
+            tr
+              th Shop name
+              th Sub genre
+              th URL
+            - @shops.each do |s|
+              tr
+                td
+                  a href=s[:url] target="_blank"
+                    = s[:shop_name]
+                td= s[:sub_category]
+                td= s[:url]
+      .span3
+        ul.nav.nav-tabs.nav-stacked
+          - @categories.each do |c|
+            li
+              a href="./shops.html?cat=#{c[:id]}"
+                = c[:name]
+                span.badge.pull-right= c[:count]
