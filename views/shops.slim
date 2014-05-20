@@ -7,6 +7,13 @@ section.bg-light-gray.faq.heading
 section
   .container
     .row
+      .span3
+        ul.nav.nav-tabs.nav-stacked
+          - @categories.each do |c|
+            li
+              a href="./shops.html?cat=#{c[:id]}"
+                = c[:name]
+                span.badge.pull-right= c[:count]
       .span9
         h2= @cat_name
         hr
@@ -22,11 +29,7 @@ section
                   a href=s[:url] target="_blank"
                     = s[:shop_name]
                 td= s[:sub_category]
-                td= s[:url]
-      .span3
-        ul.nav.nav-tabs.nav-stacked
-          - @categories.each do |c|
-            li
-              a href="./shops.html?cat=#{c[:id]}"
-                = c[:name]
-                span.badge.pull-right= c[:count]
+                td
+                  a href=s[:url] target="_blank"
+                    = s[:url]
+
