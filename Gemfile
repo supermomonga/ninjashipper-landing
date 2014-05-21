@@ -10,5 +10,6 @@ gem 'therubyracer'
 gem 'coffee-script', '~> 2.2.0'
 gem 'unicorn'
 gem 'thin'
+gem 'newrelic_rpm'
 # Use node.js
 # gem 'therubyracer'
