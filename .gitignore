@@ -4,3 +4,6 @@
 .sass-sache/*
 
 .env
+
+.ruby-version
+log

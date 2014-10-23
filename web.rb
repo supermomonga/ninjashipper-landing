@@ -51,6 +51,11 @@ get '/shops.html' do
   slim :shops
 end
 
+get '/lithium-ion-battery-installation.html' do
+  @page_title = "Notification of costs to be charged for lithium ion battery installation work."
+  slim :lithium
+end
+
 get '/*.html' do |name|
   case name.to_sym
   when :index, :index_tmp

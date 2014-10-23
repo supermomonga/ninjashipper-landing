@@ -31,6 +31,9 @@ section.price-1
           b  10%
           |  for assisted purchase fee
           br
+          b  500 JPY
+          |  for lithium-ion battery processing fee
+          br
           a target="_blank" href="/static/shipping_calc.html"
             | Shipping cost table
         a.btn.btn-primary href="http://member.ninjashipper.com/users/add" Sign up now
@@ -86,9 +89,9 @@ section.price-1
               th Consolidation fee
               td
                 p
-                  label.label.label-default 300 yen x (no. of packages - 1)
+                  label.label.label-default 300 yen * (no. of packages - 1)
                   br
-                  | By dispatching multiple versions of your products from our warehouse together, it is possible to limit the processing fee to one time and save on shipping charges. Handling charges for packaging together shall be 300 yen x the no. of packages minus 1. When one package is sent separately without being combined in the same package, this will be 0 x 300 yen=0 yen. There will be no consolidation fee.
+                  | By dispatching multiple versions of your products from our warehouse together, it is possible to limit the processing fee to one time and save on shipping charges. Handling charges for packaging together shall be 300 yen * the no. of packages minus 1. When one package is sent separately without being combined in the same package, this will be 0 x 300 yen=0 yen. There will be no consolidation fee.
                 ul
                   li
                     span.label.label-info Campaign!
@@ -100,3 +103,22 @@ section.price-1
                   label.label.label-default 3.9%
                   br
                   | When the costs are paid by PayPal, settlement charges of 3.9% will accrue in relation to the amount to pay. There are two payments, when paying the purchase agent fee (purchased amount + purchase agent fee) and at the dispatch request (delivery charge + dispatch handling charge + packaging handling charge).
+            tr
+              th Lithium ion battery installation fee
+              td
+                label.label.label-default 500 yen * (no. of lithium ion battery)
+                .alert
+                  strong Enactment date:
+                  br
+                  | When the shipment request is received by November 1st, this will be handled free of charge.
+                p
+                  | Under Aviation Law, there is now a duty for lithium ion batteries to be attached to the main product when shipping. Products that are packaged without the lithium batteries being attached to the main unit need to be opened and then repackaged and shipped after the lithium ion battery is attached to the main unit.
+                  br
+                  a.btn.btn-info[ href='/lithium-ion-battery-installation.html' ]
+                    i.icon-info-sign.icon-white
+                    '
+                    | More detailed information about lithium ion battery instlation fee is here
+
+
+
+
